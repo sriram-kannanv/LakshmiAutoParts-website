@@ -71,23 +71,46 @@ body {
 
 /* ===== NAVBAR ===== */
 header {
-    background: #222;
+    background: #111;
     padding: 15px 0;
 }
 
 nav {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
 }
 
+/* Menu Links */
 nav a {
-    color: white;
-    margin: 0 20px;
+    position: relative;
+    color: #fff;
     text-decoration: none;
     font-size: 18px;
+    padding: 5px 0;
+    transition: color 0.3s ease;
 }
 
+/* Hover Text Highlight */
 nav a:hover {
-    color: orange;
+    color: #e50914; /* Netflix red */
+}
+
+/* Animated Underline */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 3px;
+    background: #e50914;
+    transition: width 0.3s ease;
+}
+
+/* Show underline on hover */
+nav a:hover::after {
+    width: 100%;
 }
 
 /* ===== TAGLINE ===== */
