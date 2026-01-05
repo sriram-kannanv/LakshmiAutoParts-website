@@ -7,6 +7,7 @@
     <title>Lakshmi Auto Parts</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     
 <!-- NAVBAR -->
@@ -89,6 +90,21 @@
 <footer>
     <p>© 2025 Lakshmi Auto Parts. All Rights Reserved.</p>
 </footer>
+<script>
+const banner = document.querySelector(".banner");
+const bannerBg = document.querySelector(".banner-bg");
+
+window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    const bannerHeight = banner.offsetHeight;
+
+    if (scrollY <= bannerHeight) {
+        bannerBg.style.transform = `translateY(${scrollY * 0.3}px)`;
+    }
+});
+</script>
+
+
 
 </body>
 </html>
